@@ -1,0 +1,74 @@
+using System;
+
+// Clase que representa un Círculo
+public class Circulo
+{
+    // Variable privada para almacenar el radio del círculo
+    private double radio;
+
+    // Constructor para inicializar el radio del círculo
+    public Circulo(double radio)
+    {
+        this.radio = radio;
+    }
+
+    // Método para calcular el área del círculo
+    // Devuelve un valor double que representa el área
+    public double CalcularArea()
+    {
+        return Math.PI * radio * radio;
+    }
+
+    // Método para calcular el perímetro del círculo
+    // Devuelve un valor double que representa el perímetro
+    public double CalcularPerimetro()
+    {
+        return 2 * Math.PI * radio;
+    }
+}
+
+// Clase que representa un Rectángulo
+public class Rectangulo
+{
+    // Variables privadas para almacenar las dimensiones del rectángulo
+    private double largo;
+    private double ancho;
+
+    // Constructor para inicializar las dimensiones del rectángulo
+    public Rectangulo(double largo, double ancho)
+    {
+        this.largo = largo;
+        this.ancho = ancho;
+    }
+
+    // Método para calcular el área del rectángulo
+    // Devuelve un valor double que representa el área
+    public double CalcularArea()
+    {
+        return largo * ancho;
+    }
+
+    // Método para calcular el perímetro del rectángulo
+    // Devuelve un valor double que representa el perímetro
+    public double CalcularPerimetro()
+    {
+        return 2 * (largo + ancho);
+    }
+}
+
+// Clase principal para probar las figuras geométricas
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Crear un círculo con radio 5
+        Circulo circulo = new Circulo(5);
+        Console.WriteLine("Área del círculo: " + circulo.CalcularArea());
+        Console.WriteLine("Perímetro del círculo: " + circulo.CalcularPerimetro());
+
+        // Crear un rectángulo con largo 10 y ancho 4
+        Rectangulo rectangulo = new Rectangulo(10, 4);
+        Console.WriteLine("\nÁrea del rectángulo: " + rectangulo.CalcularArea());
+        Console.WriteLine("Perímetro del rectángulo: " + rectangulo.CalcularPerimetro());
+    }
+}
